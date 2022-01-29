@@ -46,3 +46,49 @@ if (dolphinsAvg > koalasAvg && dolphinsAvg >= 100) {
 } else {
   console.log(`Invalid inputs`);
 }
+
+//challenge 04
+const day = prompt("What day is it today?");
+
+switch (day) {
+  case "monday":
+  case "Monday":
+    alert(`Yes it's ${day}!`);
+    break;
+  case "tuesday":
+  case "Tuesday":
+    alert(`Yes it's ${day}!`);
+    break;
+  case "wednesday":
+  case "Wednesday":
+    alert(`Yes it's ${day}!`);
+    break;
+  case "thursday":
+  case "Thursday":
+    alert(`Yes it's ${day}!`);
+    break;
+  case "friday":
+  case "Friday":
+    alert(`Yes it's ${day}!`);
+    break;
+  case "saturday":
+  case "Saturday":
+    alert(`Yes it's ${day}!`);
+    break;
+  case "Sunday":
+  case "sunday":
+    alert(`Yes it's ${day}!`);
+    break;
+  default:
+    alert("I don't understand");
+}
+
+if (day == "monday" || day == "Monday") {
+  console.log(`Yay it's ${day}`);
+} else if (day == "tuesday" || day == "Tuesday") {
+  console.log(`Yay it's ${day}`);
+} else if (day == "wednesday" || day == "Wenesday") {
+  onsole.log(`Yay it's ${day}`);
+} else {
+  console.log(`I only like the first 3 days :>`);
+}

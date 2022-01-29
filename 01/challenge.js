@@ -176,3 +176,49 @@ for (let i = 0; i < data[data.length]; i++) {
 }
 console.log(`Array of total bills: ${Total}`);
 */
+
+//challenge 08
+/*
+const Mark = {
+  firstName: "Mark",
+  lastName: "Miller",
+  mass: 78,
+  height: 1.69,
+
+  calcBMI: function (mass, height) {
+    this.bmi = mass / height ** 2;
+    return this.bmi;
+  },
+};
+
+const John = {
+  firstName: "John",
+  lastName: "Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function (mass, height) {
+    this.bmi = mass / height ** 2;
+    return this.bmi;
+  },
+};
+
+Mark.calcBMI(Mark.mass, Mark.height);
+John.calcBMI(John.mass, John.height);
+
+console.log(
+  John.bmi > Mark.bmi
+    ? `${John.firstName} ${John.lastName}'s BMI (${John.bmi}) is
+higher than ${Mark.firstName} ${Mark.lastName}'s (${Mark.bmi})`
+    : `${Mark.firstName} ${Mark.lastName}'s (${Mark.bmi})'s higher than ${John.firstName} ${John.lastName}'s BMI (${John.bmi})
+`
+);
+//Better approach
+if (John.bmi > Mark.bmi) {
+  console.log(`${John.firstName} ${John.lastName}'s BMI (${John.bmi}) is
+higher than ${Mark.firstName} ${Mark.lastName}'s (${Mark.bmi})`);
+} else {
+  console.log(`${Mark.firstName} ${Mark.lastName}'s (${Mark.bmi})'s higher than ${John.firstName} ${John.lastName}'s BMI (${John.bmi})
+`);
+}
+*/

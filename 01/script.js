@@ -94,8 +94,48 @@ console.log(Jenn);
 
 //challenge
 const jonas = {
+  firstName: "Jonas",
   friends: ["Michael", "Peter", "Steven"],
+  birthYear: 1980,
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
 };
 //Jonas has 3 friends, and his best friend is called Michael.
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
+console.log(jonas.age);
 
-console.log(``);
+const Jenn2 = {
+  firstName: "JeongHyun",
+  lastName: "An",
+  // Age: 2022 - 1999,
+  birthYear: 1999,
+  Title: "Student",
+
+  //used attribute + function expression
+  calcAge: function () {
+    return 2022 - this.birthYear;
+  },
+  calcAge2: function () {
+    this.age = 2022 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} ${this.lastName} is ${this.age} years old
+    and was born in ${this.birthYear}. She is a ${this.Title} and has ${
+      this.license ? "a" : "no"
+    } driver's license`;
+  },
+};
+console.log(Jenn2.calcAge());
+console.log(Jenn2.calcAge2());
+console.log(Jenn2.getSummary());
+
+console.log(`${Jenn2.firstName} ${Jenn2.lastName} is ${Jenn2.age} years old
+and was born in ${Jenn2.birthYear}. She is a ${Jenn2.Title} and has ${
+  Jenn2.license ? "a" : "no"
+} driver's license`);

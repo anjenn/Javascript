@@ -1,4 +1,5 @@
 // challenge 01
+/*
 const markM = 78;
 const markH = 1.69;
 const johnM = 92;
@@ -8,8 +9,10 @@ const johnBMI = johnM / johnH ** 2;
 let markHigherBMI = markBMI > johnBMI;
 console.log(markBMI, johnBMI);
 console.log(markHigherBMI);
+*/
 
 //challenge 02
+/*
 if (markBMI > johnBMI) {
   const bmiText = "Mark's" + " BMI is higher than" + " John's" + "!";
   console.log(bmiText);
@@ -24,9 +27,11 @@ if (markBMI > johnBMI) {
   const bmiText = `John's BMI (${johnBMI}) is higher than Mark's BMI (${markBMI})`;
   console.log(bmiText);
 }
+*/
 
 //challenge 03
 // const dolphins1 = 96;
+/*
 const dolphins1 = 150;
 const dolphins2 = 108;
 const dolphins3 = 89;
@@ -46,8 +51,10 @@ if (dolphinsAvg > koalasAvg && dolphinsAvg >= 100) {
 } else {
   console.log(`Invalid inputs`);
 }
+*/
 
 //challenge 04
+/*
 const day = prompt("What day is it today?");
 
 switch (day) {
@@ -92,8 +99,10 @@ if (day == "monday" || day == "Monday") {
 } else {
   console.log(`I only like the first 3 days :>`);
 }
+*/
 
 //challenge 05
+/*
 const bill = 275;
 let tip;
 const str = `The bill was  ${bill},
@@ -108,3 +117,29 @@ The tip was ${(tip2 =
   50 <= bill2 && bill2 <= 300 ? bill2 * 0.15 : bill2 * 0.2)} 
 The total value was ${tip2 + bill2}`;
 console.log(str2);
+*/
+
+//challenge 06
+/*
+const calcAverage = (first, second, third) => (first + second + third) / 3;
+const dolphinsAvg = calcAverage(44, 23, 71);
+const dolphinsAvg2 = calcAverage(65, 54, 49);
+const koalasAvg = calcAverage(85, 54, 41);
+const koalasAvg2 = calcAverage(23, 34, 27);
+console.log(`Dolphins' average = ${dolphinsAvg}
+Koalas' average = ${koalasAvg}`);
+console.log(`Dolphins' average = ${dolphinsAvg2}
+Koalas' average = ${koalasAvg2}`);
+const checkWinner = function (dolphinsAvg, koalasAvg) {
+  if (dolphinsAvg >= koalasAvg * 2) {
+    return `Dolphins won, points: ${dolphinsAvg}`;
+  } else if (koalasAvg >= dolphinsAvg * 2) {
+    return `Koalas won, points: ${koalasAvg}`;
+  } else {
+    return `Nobody won`;
+  }
+};
+console.log(checkWinner(dolphinsAvg, koalasAvg));
+console.log(checkWinner(dolphinsAvg2, koalasAvg2));
+console.log(checkWinner(576, 111));
+*/

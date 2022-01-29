@@ -41,3 +41,29 @@ const calcAge2 = function (birthYear) {
 };
 const age2 = calcAge2(1990);
 console.log(age1, age2);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retires in ${retirement} year`;
+};
+//same as
+const yearsUntilRetirement2 = function (birthYear, firstName) {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retires in ${retirement} year`;
+};
+
+/* Arrays */
+const friends = ["Michael", "Steven", "Peter"]; //more common
+console.log(friends);
+const years = new Array(1991, 1984, 2009, 2020);
+console.log(friends[friends.length - 1]); //very last elements
+firstName = "JENN";
+const newArr = [firstName, "Jenn", 200 - 34, "Hi", friends];
+console.log(newArr);
+newArr.push("New");
+console.log(newArr);
+const newNew = newArr.push("Hi"); //this is a length
+console.log(newNew);
+newArr.unshift("first"); //insertion at the beginnning;

@@ -92,3 +92,19 @@ if (day == "monday" || day == "Monday") {
 } else {
   console.log(`I only like the first 3 days :>`);
 }
+
+//challenge 05
+const bill = 275;
+let tip;
+const str = `The bill was  ${bill},
+The tip was ${(tip = 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2)} 
+The total value was ${tip + bill}`;
+console.log(str);
+
+const bill2 = 40;
+let tip2;
+const str2 = `The bill was  ${bill2},
+The tip was ${(tip2 =
+  50 <= bill2 && bill2 <= 300 ? bill2 * 0.15 : bill2 * 0.2)} 
+The total value was ${tip2 + bill2}`;
+console.log(str2);

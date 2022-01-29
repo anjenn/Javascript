@@ -67,3 +67,35 @@ console.log(newArr);
 const newNew = newArr.push("Hi"); //this is a length
 console.log(newNew);
 newArr.unshift("first"); //insertion at the beginnning;
+
+/* Objects */
+const JennArr = ["JeongHyun", "An", 2022 - 1999, "student"];
+const Jenn = {
+  firstName: "JeongHyun",
+  lastName: "An",
+  Age: 2022 - 1999,
+  Title: "Student",
+};
+
+console.log(Jenn.Age);
+console.log(Jenn["firstName"]);
+
+//working with concatenation
+const nameKey = "Name";
+console.log(Jenn["first" + nameKey]);
+console.log(Jenn["last" + nameKey]);
+/*
+const question = prompt(`Choose between firstName, lastName, Age, Title`);
+console.log(Jenn[question]);*/
+Jenn.location = "Korea";
+Jenn["nickNAme"] = "Jenn";
+
+console.log(Jenn);
+
+//challenge
+const jonas = {
+  friends: ["Michael", "Peter", "Steven"],
+};
+//Jonas has 3 friends, and his best friend is called Michael.
+
+console.log(``);

@@ -143,3 +143,36 @@ console.log(checkWinner(dolphinsAvg, koalasAvg));
 console.log(checkWinner(dolphinsAvg2, koalasAvg2));
 console.log(checkWinner(576, 111));
 */
+
+//challenge 07
+/*
+const calcTip = (bill) => {
+  if (50 <= bill && bill <= 300) {
+    const tip = bill * 0.15;
+    bill *= 1.15;
+    console.log(`Tip: ${tip}, Total bill: ${bill}`);
+    return tip;
+  } else {
+    const tip = bill * 0.2;
+    bill *= 1.2;
+    console.log(`Tip: ${tip}, Total bill: ${bill}`);
+    return tip;
+  }
+};
+const data1 = 125;
+const data2 = 55;
+const data3 = 44;
+const data = [data1, data2, data3];
+console.log(`Array of test data: ${data}`);
+const TipsCalc = [calcTip(data[0]), calcTip(data[1]), calcTip(data[2])];
+console.log(`Array of tips: ${TipsCalc}`);
+const Total = data;
+for (let i = 0; i < data[data.length]; i++) {
+  if (50 <= data[i] && data[i] <= 300) {
+    Total[i] = data[i] * 1.15;
+  } else {
+    Total[i] = data[i] * 1.2;
+  }
+}
+console.log(`Array of total bills: ${Total}`);
+*/

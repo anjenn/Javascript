@@ -166,10 +166,11 @@ const data = [data1, data2, data3];
 console.log(`Array of test data: ${data}`);
 const TipsCalc = [calcTip(data[0]), calcTip(data[1]), calcTip(data[2])];
 console.log(`Array of tips: ${TipsCalc}`);
-const Total = data;
+const Total = [];
 for (let i = 0; i < data[data.length]; i++) {
   if (50 <= data[i] && data[i] <= 300) {
     Total[i] = data[i] * 1.15;
+    //Total.push(data[i]*1.15); //alternative
   } else {
     Total[i] = data[i] * 1.2;
   }
@@ -221,4 +222,42 @@ higher than ${Mark.firstName} ${Mark.lastName}'s (${Mark.bmi})`);
   console.log(`${Mark.firstName} ${Mark.lastName}'s (${Mark.bmi})'s higher than ${John.firstName} ${John.lastName}'s BMI (${John.bmi})
 `);
 }
+*/
+
+//challenge 09
+/*
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52],
+  tips = [],
+  totals = [];
+const calcTip = function (bill) {
+  if (50 <= bill && bill <= 300) {
+    const tip = bill * 0.15;
+    bill *= 1.15;
+    console.log(`Tip: ${tip}, Total bill: ${bill}`);
+    return tip;
+  } else {
+    const tip = bill * 0.2;
+    bill *= 1.2;
+    console.log(`Tip: ${tip}, Total bill: ${bill}`);
+    return tip;
+  }
+};
+for (let i = 0; i < 10; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(bills[i] + tips[i]);
+}
+console.log(tips);
+console.log(totals);
+
+const calcAvg = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i]);
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+console.log(`Average of bills ${calcAvg(bills)}`);
+console.log(`Average of tips ${calcAvg(tips)}`);
+console.log(`Average of totals ${calcAvg(totals)}`);
 */

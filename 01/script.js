@@ -139,3 +139,14 @@ console.log(`${Jenn2.firstName} ${Jenn2.lastName} is ${Jenn2.age} years old
 and was born in ${Jenn2.birthYear}. She is a ${Jenn2.Title} and has ${
   Jenn2.license ? "a" : "no"
 } driver's license`);
+
+console.log(`only strings`);
+for (let i = 0; i < Jenn2.length; i++) {
+  if (typeof Jenn2[i] !== "string") continue;
+  //continue executes the following line immediately. if condition isn't met,
+  //the following line won't be reached at all
+  console.log(Jenn2[i], typeof Jenn2[i]);
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);

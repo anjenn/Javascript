@@ -12,8 +12,8 @@ const currScore1El = document.querySelector('#current--0');
 const currScore2El = document.querySelector('#current--1');
 //Resetting the score of both players
 const initScore = 0;
-totalScore1El.textContent = initScore;
-totalScore2El.textContent = initScore;
+totalScore1El.textContent = 80;
+totalScore2El.textContent = 80;
 currScore1El.textContent = initScore;
 currScore2El.textContent = initScore;
 //Generating Random Value
@@ -21,6 +21,8 @@ let ran = Math.trunc(Math.random() * 6) + 1;
 //Player Selection
 let playerStatus = 1;
 let currScore = 0; // score tracker for each round
+//could use an array instead.
+//scores = [0, 0];
 
 const newGame = document.querySelector('.btn--new');
 const diceRoll = document.querySelector('.btn--roll');
@@ -38,38 +40,26 @@ const resetCurrScores = function () {
 };
 
 const switchPlayers = function () {
-  if (playerStatus == 1) {
-    //diceImg.classList.add('hidden');
-    document.querySelector('.player--0').classList.remove('player--active');
-    document.querySelector('.player--1').classList.add('player--active');
-    playerStatus = 2;
-    console.log(`player status changed to ${playerStatus}`);
-  } else if (playerStatus == 2) {
-    document.querySelector('.player--0').classList.add('player--active');
-    document.querySelector('.player--1').classList.remove('player--active');
-    playerStatus = 1;
-    console.log(`player status changed to ${playerStatus}`);
-  } else {
-    alert('Wrong Player was selected!');
-  }
+  playerStatus = playerStatus == 1 ? 2 : 1;
+  //diceImg.classList.add('hidden');
+  document.querySelector('.player--0').classList.toggle('player--active');
+  document.querySelector('.player--1').classList.toggle('player--active');
+  console.log(`player status changed to ${playerStatus}`);
 };
 
 const checkIf100 = function () {
-  if (playerStatus == 1) {
-    if (totalScore1El.textContent >= 100) {
-      document.querySelector('.player--0').classList.add('player--winner');
-      alert(
-        `Player ${playerStatus} won with score of ${totalScore1El.textContent}!`
-      );
-    }
-  }
-  if (playerStatus == 2) {
-    if (totalScore2El.textContent >= 100) {
-      document.querySelector('.player--1').classList.add('player--winner');
-      alert(
-        `Player ${playerStatus} won with score of ${totalScore2El.textContent}!`
-      );
-    }
+  //const temp = playerStatus - 1;
+  const totalScoreEl = document.querySelector(`#score--${playerStatus - 1}`);
+  console.log(`the score is ${totalScoreEl.textContent}`);
+  if (totalScoreEl.textContent >= 100) {
+    document
+      .querySelector(`.player--${playerStatus - 1}`)
+      .classList.add('player--winner');
+    alert(
+      `Player ${playerStatus} won with a total score of ${totalScoreEl.textContent}!`
+    );
+  } else {
+    console.log(`the score is not yet 100`);
   }
 };
 
@@ -108,7 +98,7 @@ diceRoll.addEventListener('click', function () {
   /*
   const dice = Math.trunc(Math.random() * 6) + 1;
   diceImg.classList.remove('hidden');
-  diceImg.src=`dice-${dice}.png`;
+  diceImg.src=`dice-${dice}.png`;d
   */
 
   switch (ran) {

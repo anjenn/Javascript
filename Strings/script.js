@@ -1,5 +1,6 @@
 'use strict';
 
+/*
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // BANKIST APP
@@ -73,28 +74,4 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-/////////////////////////////////////////////////
-
-// SLICE METHOD (doesn't mutate)
-let arr = ['a', 'b', 'c', 'd', 'e'];
-
-console.log(arr.slice(2)); // new array starts from arr[2]
-console.log(arr.slice(2, 4)); // array between 2 to 4
-console.log(arr.slice(-2)); // last 2 elements
-console.log(arr.slice(-1)); // last 1 element
-console.log(arr.slice(1, -2)); // starts from arr[1], everything except the last 2
-
-console.log(arr.slice()); //making a shallow copy
-console.log(...arr); //making a shallow copy
-
-// SPLICE METHOD (does mutate)
-let arr = ['a', 'b', 'c', 'd', 'e'];
-arr.splice(-1); // deleted the last element
-//difference!!
-arr.splice(1, 2); // starting from arr[i], deleting consecutive 2
-
-// REVERSE
-arr = ['a', 'b', 'c', 'd', 'e'];
-const arr2 = ['j', 'i', 'h', 'g', 'f'];
-console.log(arr2.reverse());
-console.log;
+*/

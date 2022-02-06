@@ -52,20 +52,22 @@ console.log(arr.at(-1)); //at() method allows us to count from the last element
 
 // LOOP
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-for (const movement of movements) {
+for (const [i, movement] of movements.entries()) {
   if (movement > 0) {
-    console.log(`You deposited ${movement}`);
+    console.log(`Movement ${i + 1}: You deposited ${movement}`);
   } else {
-    console.log(`You withdrew ${Math.abs(movement)}`);
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`);
   }
 } // just like any for loop, loop over the whole array
 
-// FOREACH
+// FOREACH (break and continue doesn't work)
 console.log(`-----FOR EACH-----`);
-movements.forEach(function (movement) {
-  if (movement > 0) {
-    console.log(`You deposited ${movement}`);
+// parameters' naming could differ, but the order must be the same
+movements.forEach(function (mov, i, array) {
+  if (mov > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${mov}`);
   } else {
-    console.log(`You withdrew ${Math.abs(movement)}`);
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
   }
 }); // for each iteration/element, we give this instruction
+// forEach passes into the current element index & entire array (these can show in the parameter list)

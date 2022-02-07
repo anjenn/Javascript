@@ -47,10 +47,12 @@ console.log(depositsFor);
 
 const withdrawals = movements1.filter((mov) => mov < 0);
 
-// FIND (it retrieves only one element)
+//// FIND (it retrieves only one element)
 const found = movements.find((mov) => mov < 0);
 console.log(`the first negative value`);
 //useful when we search through array of objects
+
+//// FINDINDEX (returns the index of the found element)
 
 /////////////////////////////////////////////////////////////
 // REDUCE

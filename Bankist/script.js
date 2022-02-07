@@ -104,6 +104,14 @@ calcDisplayBalance(account1.movements);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
+/////////////////////////////////////////////////
+// Event handlers
+
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('Delete');
+});
+
 /*
 for (const account of accounts) {
   if (account.owner === 'Jessica Davis') console.log(account);

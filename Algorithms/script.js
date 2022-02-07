@@ -35,3 +35,27 @@ addNumbers2(array);
 addNumbers3(array);
 
 console.log(array.reduce((acc, curr) => (acc += curr), 0));
+
+// FIBONACCI
+function fib(n) {
+  const numbers = [1, 1]; // 1
+  for (let i = 2; i < n + 1; i++) {
+    numbers.push(numbers[i - 2] + numbers[i - 1]); //n-1
+  }
+  return numbers[n];
+} // linear
+
+// PRIMALITY TEST
+console.log();
+function isPrime(n) {
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+isPrime(3);
+isPrime(4);
+isPrime(5);
+isPrime(6);

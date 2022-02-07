@@ -47,6 +47,11 @@ console.log(depositsFor);
 
 const withdrawals = movements1.filter((mov) => mov < 0);
 
+// FIND (it retrieves only one element)
+const found = movements.find((mov) => mov < 0);
+console.log(`the first negative value`);
+//useful when we search through array of objects
+
 /////////////////////////////////////////////////////////////
 // REDUCE
 
@@ -67,3 +72,19 @@ const max = movements1.reduce((acc, mov) => {
   else return mov;
 }, movements1[0]);
 console.log(max);
+
+/////////////////////////////////////////////////////////////
+// CHAINING METHODS
+
+const totalDeopsitUSD = movements1
+  .filter((mov) => mov > 0)
+  .map((mov) => mov * eurToUsd)
+  // .map((mov, i, arr) => {
+  //   console.log(arr);
+  //   return mov * eurToUsd;
+  // })
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDeopsitUSD);
+
+// to check the behavior of one part of the chain
+// we can check it out via current element of the next part

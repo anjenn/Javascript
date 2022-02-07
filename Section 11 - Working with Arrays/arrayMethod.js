@@ -17,6 +17,7 @@ arr = ["a", "b", "c", "d", "e"];
 console.log(arr.splice(-1)); // only the last element
 //difference!!
 console.log(arr.splice(1, 2)); // starting from arr[i], deleting consecutive 2
+console.log(arr);
 
 // REVERSE METHOD (does mutate)
 arr = ["a", "b", "c", "d", "e"];
@@ -35,17 +36,17 @@ console.log(letter.join(" - ")); // string with a specified separator
 /////////////////////////////////////////////////
 
 // AT METHOD (also works on strings)
-const arr = [23, 11, 61];
-console.log(arr[0]);
-console.log(arr.at(0));
+const arr3 = [23, 11, 61];
+console.log(arr3[0]);
+console.log(arr3.at(0));
 
-console.log(arr(arr.length - 1));
-console.log(arr.slice);
-console.log(arr.at(0)); // same as arr[0]
+console.log(arr3[arr3.length - 1]);
+console.log(arr3.slice);
+console.log(arr3.at(0)); // same as arr[0]
 //its usage (when extracting the last element for example):
-console.log(arr[arr.length - 1]);
-console.log(arr.slice(-1)[0]);
-console.log(arr.at(-1)); //at() method allows us to count from the last element
+console.log(arr3[arr.length - 1]);
+console.log(arr3.slice(-1)[0]);
+console.log(arr3.at(-1)); //at() method allows us to count from the last element
 
 ////TIP
 //Use arr[0] to get the first, arr.at(-1) to get the last element
@@ -71,3 +72,18 @@ movements.forEach(function (mov, i, array) {
   }
 }); // for each iteration/element, we give this instruction
 // forEach passes into the current element index & entire array (these can show in the parameter list)
+
+///////// MAPS
+const currencies = new Map([
+  [`USD`, `United States Dollar`], //each element is an map entry
+  [`EUR`, `Euro`], // key, value pair
+  [`GBP`, `Pound Sterling`],
+]);
+
+currencies.forEach(function (value, key, map) {
+  console.log(`${key}, ${value}`);
+});
+
+// SET
+const currenciesUnique = new Set([`USD`, `GBP`, `USD`, `EUR`]);
+console.log(currenciesUnique);

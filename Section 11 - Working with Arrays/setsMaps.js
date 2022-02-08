@@ -46,6 +46,9 @@ console.log(
 // Seeing how many unique characters there are
 console.log(new Set("jonasschemedtmann").size);
 
+// Objects inside a set!
+/* Object is created with curly braces, and a list of properties. */
+
 //////////////////////////////////////////////////////////////
 // MAPS
 //////////////////////////////////////////////////////////////
@@ -158,3 +161,18 @@ console.log([...question.values()]);
 
 // which one to choose?
 // sets, objects, maps, arrays
+
+//////////////////////////////////////////////////////////////
+// MAP ? SET?
+//////////////////////////////////////////////////////////////
+const birds = [
+  { ID: "DV8", Name: "Eurasian Collared-Dove", Type: "Dove" },
+  { ID: "HK12", Name: "Bald Eagle", Type: "Hawk" },
+  { ID: "HK6", Name: "Cooper's Hawk", Type: "Hawk" },
+  { ID: "SP11", Name: "Bell's Sparrow", Type: "Sparrow" },
+  { ID: "DV2", Name: "Mourning Dove", Type: "Dove" },
+];
+
+const arrBirdID = birds.map((bird) => bird.ID);
+
+// this is just an array of objects

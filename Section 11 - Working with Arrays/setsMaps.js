@@ -98,6 +98,21 @@ rest.set(document.querySelector("h1"), "Heading");
 //////////////////////////////////////////////////////////////
 // MAPS ITERATION
 //////////////////////////////////////////////////////////////
+const openingHours = {
+  // we can put any expression in the square brackets below
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
 
 const question = new Map([
   ["question", "What is the best programming language in the world?"],
@@ -109,3 +124,37 @@ const question = new Map([
   [false, "Wrong!"],
 ]); // we can use set() method when we keep adding element,
 // but declaring all at once also works
+console.log(question);
+
+// Converting object to map
+console.log(Object.entries(openingHours));
+const hourMap = new Map(Object.entries(openingHours));
+console.log(hourMap);
+
+//Quiz app
+console.log(question.get("question"));
+for (const [key, value] of question) {
+  if (typeof key === "number") {
+    console.log(`Answer ${key}: ${value}`);
+  }
+}
+//const answer = Number(prompt(`Your answer: `));
+const answer = 3;
+console.log(answer);
+const check = (answer) => {
+  if (question.get("correct") === answer) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(question.get(check(answer)));
+
+// Convert map to array
+console.log([...question]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
+
+// which one to choose?
+// sets, objects, maps, arrays

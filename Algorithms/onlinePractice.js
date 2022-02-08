@@ -60,4 +60,59 @@ addTwoNumbers([1, 2, 3], [3, 4, 5]);
 addTwoNumbers([9, 9, 9, 9, 9], [3, 4, 6, 2]);
 
 /////////////////////////////////////////////////////////////
-// Add two sums
+// Longest Substring Without Repeating Characters
+// Given a string s, find the length of the longest substring without repeating characters.
+var lengthOfLongestSubstring = function(s) {
+  for
+    
+};
+
+
+/////////////////////////////////////////////////////////////
+// Smallest missing integer
+
+function solution(A){
+  for(var i = 0; i < A.length; i++){
+    for(var j = 0; j < ( A.length - i -1 ); j++){
+      if(A[j] > A[j+1]){
+        var temp = A[j]
+        A[j] = A[j + 1]
+        A[j+1] = temp
+      }
+    }
+  }
+  let num =1;
+  for(var k = 0; k<A.length; k++){
+    if(num < A[0] && num > A[length-1]){
+      return num; 
+    }
+    else if(num > A[k] && num < A[k+1])
+    {
+      return num;
+    }
+    else{
+      num++;
+    }
+  }
+  return num;
+}
+
+A = [1, 3, 6, 4, 1, 2]
+
+/////////////////////////////////////////////////////////////
+// Roman to Integer
+
+var romanToInt = function(s) {
+  const result = [];
+  const num = Array.from(s);
+  for(let i = 0; i<num.length; i++){
+    switch(num[i]){
+      case 'I':
+      case 
+
+
+    }
+
+  }
+    
+};

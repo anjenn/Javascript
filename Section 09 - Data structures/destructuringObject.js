@@ -8,7 +8,7 @@ const restaurantDO = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  openingHours: {
+  /*openingHours: {
     thu: {
       open: 12,
       close: 22,
@@ -22,6 +22,7 @@ const restaurantDO = {
       close: 24,
     },
   },
+  */
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },

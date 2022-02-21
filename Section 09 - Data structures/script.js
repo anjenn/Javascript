@@ -17,11 +17,11 @@ const openingHours = {
     open: 11,
     close: 23,
   },
-  [`day - ${2+5}`]: {
+  [`day - ${2 + 5}`]: {
     open: 0, // Open 24 hours
     close: 24,
   },
-},;
+};
 
 const restaurant = {
   name: 'Classico Italiano',
@@ -36,8 +36,8 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
-  newFunction(a,b){
-    console.log(a,b);
+  newFunction(a, b) {
+    console.log(a, b);
   },
 
   // when we received an object, we immediately do the destructuring

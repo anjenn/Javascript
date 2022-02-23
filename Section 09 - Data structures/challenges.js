@@ -143,7 +143,6 @@ for (const [team, odd] of Object.entries(game.odds)) {
 ///////////////////////////////////////
 //03
 
-
 /* 
 Let's continue with our football betting app! This time, we have a map with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
 
@@ -170,4 +169,23 @@ const gameEvents = new Map([
   [92, '🔶 Yellow card'],
 ]);
 
-/*
+//1. Create an array 'events' of the different game events that happened (no duplicates)
+const eventSet = new Set([...gameEvents.values()]);
+//or [...new Set([...gameEvents.values()])]
+const events = [...eventSet];
+console.log(events);
+//2
+gameEvents.delete(64);
+console.log(gameEvents);
+//3
+const time = [...gameEvents.keys()].pop();
+console.log(time);
+
+console.log(
+  `An event happened, on average, every ${time / gameEvents.size} minutes`
+);
+
+for (const [key, value] of gameEvents.entries()) {
+  let strHalf = key < 45 ? `[FIRST HALF]` : `[SECOND HALF]`;
+  console.log(`${strHalf} ${key}: ${value}`);
+}

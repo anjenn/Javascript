@@ -72,6 +72,21 @@ const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 const {
   odds: { team1, x: draw, team2 },
 } = game;
+
+//6. Write a function ('printGoals') that receives an arbitrary number of player names (NOT an array) and prints each of them to the console, along with the number of goals that were scored in total (number of player names passed in)
+const printGoals = function (...players) {
+  console.log(players);
+  console.log(`${players.length} goals were scored`);
+};
+//passing in ...players aggreagates all the incoming strings into one array
+
+printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+printGoals(...game.scored);
+
+//7. && and || operator can be used
+team1 < team2 && console.log(`Team 1 is more likely to win`);
+team1 > team2 && console.log(`Team 2 is more likely to win`);
+
 console.log(gk);
 console.log(fieldPlayers);
 //2. The first player in any player array is the goalkeeper and the others are field players. For Bayern Munich (team 1) create one variable ('gk') with the goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10 field players

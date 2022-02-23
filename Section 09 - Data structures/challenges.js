@@ -1,3 +1,4 @@
+///////////////////////////////////////
 // 01
 const game = {
   team1: 'Bayern Munich',
@@ -92,6 +93,7 @@ console.log(fieldPlayers);
 //2. The first player in any player array is the goalkeeper and the others are field players. For Bayern Munich (team 1) create one variable ('gk') with the goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10 field players
 players1.push();
 
+///////////////////////////////////////
 //02
 /*
 1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
@@ -102,7 +104,9 @@ players1.push();
       Odd of victory Borrussia Dortmund: 6.5
 Get the team names directly from the game object, don't hardcode them (except for "draw"). HINT: Note how the odds and the game objects have the same property names 😉
 
-BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+BONUS: Create an object called 'scorers' which contains the names of the players
+who scored as properties,
+and the number of goals as the value. In this game, it will look like this:
       {
         Gnarby: 1,
         Hummels: 1,
@@ -119,3 +123,51 @@ for (const [key, value] of game.scored.entries()) {
 // 2.
 const oddsentries = Object.entries(game.odds);
 console.log(oddsentries);
+let avg = 0;
+for (const [key, items] of oddsentries) {
+  avg += items;
+}
+console.log(avg / oddsentries.length);
+// 3.
+for (const [team, odd] of Object.entries(game.odds)) {
+  oddStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${oddStr}: ${odd}`);
+}
+
+/*
+      Odd of victory Bayern Munich: 1.33
+      Odd of draw: 3.25
+      Odd of victory Borrussia Dortmund: 6.5
+*/
+
+///////////////////////////////////////
+//03
+
+
+/* 
+Let's continue with our football betting app! This time, we have a map with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
+
+1. Create an array 'events' of the different game events that happened (no duplicates)
+2. After the game has finished, is was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
+3. Print the following string to the console: "An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes)
+4. Loop over the events and log them to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:
+      [FIRST HALF] 17: ⚽️ GOAL
+
+GOOD LUCK 😀
+*/
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
+
+/*

@@ -37,3 +37,40 @@ checkMiddleSeat("3E");
 // when we call a string js bts basically converts it into an object
 
 console.log(typeof new String("jonas"));
+// after we use the methods we get a string result
+console.log(typeof new String("jonas").slice(1));
+
+// a function that takes a passenger name and returns a correct capitalised one
+
+const someName = "jONas";
+const lowerCasedName = someName.toLowerCase();
+console.log(lowerCasedName);
+
+const capitaliseNames = function (name) {
+  //const str = name;
+  const lowered = name.toLowerCase();
+  const correct = lowered[0].toUpperCase() + lowered.slice(1);
+  console.log(correct);
+};
+
+capitaliseNames("catheRine");
+
+// Comparing emails
+const email = "hello@jonas.io";
+const loginEmail = "Hello@jonas.io";
+
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim(); // to get rid of empty space
+console.log(trimmedEmail);
+// Same thing as above
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+
+console.log(normalizedEmail);
+console.log(trimmedEmail);
+console.log(email === normalizedEmail);
+
+// Replacing
+const priceGB = "288,97€";
+const priceUS = priceGB.replace("€", "$");
+console.log(priceUS);

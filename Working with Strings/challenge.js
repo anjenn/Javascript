@@ -1,4 +1,4 @@
-const underscoreToCame = function (str) {
+const underscoreToCamel = function (str) {
   /*
   for (row of block) {
   }
@@ -10,4 +10,4 @@ const underscoreToCame = function (str) {
   return first + newSecond;
 };
 
-console.log(underscoreToCame("hi_iM"));
+console.log(underscoreToCamel("hi_iM"));

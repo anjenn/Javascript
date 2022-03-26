@@ -20,3 +20,32 @@ greet(`Hello`)(`Jonas`); //this also works
 const greet2 = (greeting2) => {
   (name) => console.log(`${greeting2} ${name}`);
 };
+
+////////////////////////////////////////////
+//Call and apply methods
+////////////////////////////////////////////
+const lufthansa = {
+  airline: "Lufthansa",
+  iataCode: "LH",
+  bookings: [],
+
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+lufthansa.book(239, "Jenn An");
+lufthansa.book(635, "John Smith");
+console.log(lufthansa);
+
+const eurowing = {
+  name: "Eurowings",
+  iataCode: "EW",
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+book(23, "Sarah Williams");

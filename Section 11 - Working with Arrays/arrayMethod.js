@@ -80,8 +80,12 @@ const currencies = new Map([
   [`GBP`, `Pound Sterling`],
 ]);
 
+//key: first element of the array used to search for the tuple,
+//value: content
+//map (as a parameter): we send the entire map that we work on
+//current value, current key, and entire array.
 currencies.forEach(function (value, key, map) {
-  console.log(`${key}, ${value}`);
+  console.log(`${key}: ${value}`);
 });
 
 // SET

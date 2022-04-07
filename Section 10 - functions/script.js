@@ -22,7 +22,7 @@ const greet2 = (greeting2) => {
 };
 
 ////////////////////////////////////////////
-//Call and apply methods
+//Call methods
 ////////////////////////////////////////////
 const lufthansa = {
   airline: "Lufthansa",
@@ -41,11 +41,42 @@ lufthansa.book(635, "John Smith");
 console.log(lufthansa);
 
 const eurowing = {
-  name: "Eurowings",
+  airline: "Eurowings",
   iataCode: "EW",
   bookings: [],
+  //must have same attribute names
 };
 
 const book = lufthansa.book;
 
 book(23, "Sarah Williams");
+
+book.call(eurowing);
+//first keyword: what we want 'this' pointer to point to.
+
+book.call(lufthansa, 239, "Mary Cooper");
+console.log(lufthansa);
+
+const swiss = {
+  airline: "Swiss Air Lines",
+  iatacode: "LX",
+  bookings: [],
+};
+
+book.call(swiss, 583, "Mary Cooper");
+console.log(swiss);
+
+////////////////////////////////////////////
+//Apply methods
+////////////////////////////////////////////
+
+//works the same as call method, but one difference is that apply does not receive a list of arguments
+// after 'this' keyword.
+
+const flightData = [583, "George Cooper"];
+book.apply(swiss, flightData);
+console.log(swiss);
+//apply method is not used as often anymore
+// because we have something simpler:
+
+book.call(swiss, ...flightData);
